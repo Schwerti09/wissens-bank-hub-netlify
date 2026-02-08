@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Wissens-Bank | Security & Setup Hub</title>
+  <meta name="description" content="Minimalistische Security- und Setup-Seite mit Quickcheck, Hardening-Guide, Hosting-Empfehlungen und DSGVO-Rechtsseiten." />
+  <link rel="canonical" href="https://example.netlify.app/" />
+  <meta name="robots" content="index,follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Wissens-Bank | Security & Setup Hub" />
+  <meta property="og:description" content="Minimalistische Security- und Setup-Seite mit Quickcheck, Hardening-Guide, Hosting-Empfehlungen und DSGVO-Rechtsseiten." />
+  <meta property="og:url" content="https://example.netlify.app/" />
+  <meta name="theme-color" content="#070a12" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/assets/styles.css" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Wissens-Bank", "url": "https://example.netlify.app", "email": "rps-vertrieb@t-online.de", "address": {"@type": "PostalAddress", "streetAddress": "Karklandsweg 1", "postalCode": "26553", "addressLocality": "Dornum", "addressCountry": "DE"}}</script>
+</head>
+<body>
+  <div class="nav">
+  <div class="container">
+    <div class="row">
+      <a class="brand" href="/"><span>Wissens</span>-Bank</a>
+      <nav class="menu">
+        <a href="/sicherheit/">Sicherheit</a>
+        <a href="/einrichtung/">Einrichtung</a>
+        <a href="/hosting-kosten/">Hosting & Kosten</a>
+        <a href="/impressum/">Impressum</a>
+      </nav>
+      <div class="badges">
+        <span class="pill">DSGVO</span>
+        <span class="pill">Keine Speicherung im Check</span>
+        <span class="pill">Static-first</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+<section class="hero">
+  <div class="container">
+    <div class="heroGrid">
+      <div class="hcard card">
+        <h1 class="h1">Sicherheit & Setup – <span style="color:var(--brand)">ohne Bullshit</span>.</h1>
+        <p class="sub">
+          Minimalistische Seite, maximaler Nutzen: Quick-Check, Hardening-Guide, Hosting-Empfehlungen – plus saubere Rechtsseiten.
+        </p>
+        <div class="kpis">
+          <div class="kpi"><b>0</b><small>Daten gespeichert im Security-Check</small></div>
+          <div class="kpi"><b>&lt;1s</b><small>First paint (static)</small></div>
+          <div class="kpi"><b>100%</b><small>Deploy-sicher (Netlify)</small></div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="#check">Security-Check starten</a>
+          <a class="btn" href="/sicherheit/">Hardening-Guide</a>
+          <a class="btn" href="/hosting-kosten/">Empfehlungen</a>
+        </div>
+        <p class="small" style="margin-top:12px">
+          <b>Transparenz:</b> Affiliate-Links finanzieren den Betrieb. Wir markieren das klar und halten uns an DSGVO.
+        </p>
+      </div>
+
+      <div class="panel card" id="check">
+        <div class="panel">
+          <h2 style="margin:0 0 6px; font-size:20px">Kostenloser Sicherheits-Quickcheck</h2>
+          <div class="small">Heuristik + Checkliste. Kein Scanning, kein Tracking.</div>
+
+          <form id="sec-form" style="margin-top:12px">
+            <label class="label" for="sec-target">IP / Domain / URL</label>
+            <input class="input" id="sec-target" placeholder="z.B. 203.0.113.10 oder example.com" />
+            <div class="row2">
+              <button id="sec-btn" class="btn primary" type="submit">Kostenlos prüfen</button>
+              <a class="btn" href="/sicherheit/">Guide öffnen</a>
+            </div>
+          </form>
+
+          <div id="sec-out"></div>
+
+          <hr style="border:0; border-top:1px solid var(--line); margin:14px 0" />
+
+          <h3 style="margin:0 0 6px; font-size:16px">Kostenlose Checkliste per Mail</h3>
+          <div class="small">Optional. Wird nur gespeichert, wenn Neon aktiv ist und du einwilligst.</div>
+          <form id="lead-form" style="margin-top:10px">
+            <label class="label" for="lead-email">E-Mail</label>
+            <input class="input" id="lead-email" type="email" placeholder="du@domain.de" required />
+            <label class="small" style="display:flex; gap:10px; align-items:flex-start; margin-top:10px">
+              <input id="lead-consent" type="checkbox" style="margin-top:3px" />
+              <span>Ich willige ein, dass meine E-Mail zur Zusendung der Checkliste verarbeitet wird. Details in der <a href="/datenschutz/">Datenschutzerklärung</a>.</span>
+            </label>
+            <div class="row2" style="margin-top:10px">
+              <button class="btn primary" type="submit">Senden</button>
+              <div id="lead-out" class="small" style="align-self:center"></div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>Premium-Empfehlungen (Affiliate)</h2>
+    <p>
+      Kein Low-End-Kram. Wenn du Stabilität willst, brauchst du Infrastruktur, die das ernst nimmt.
+      Hier sind Programme mit starkem Preisniveau (und typischerweise hohen Provisionsmodellen).
+    </p>
+    <div class="grid3">
+        <div class="offer card">
+          <span class="tag">High-Ticket Hosting</span>
+          <h3>Kinsta Managed Hosting</h3>
+          <p>Premium WordPress Hosting für Performance & Security. Ideal, wenn du 'keine Experimente' willst.</p>
+          <div class="meta"><span>Managed</span><span>Performance</span><span>Security</span></div>
+          <div class="actions" style="margin-top:12px">
+            <a class="btn primary" href="https://kinsta.com/?utm_source=wissens-bank&utm_medium=affiliate&utm_campaign=security-hub" target="_blank" rel="noreferrer">Kinsta ansehen →</a>
+            <a class="btn" href="/hosting-kosten/">Vergleich</a>
+          </div>
+          <div class="small" style="margin-top:10px">Hoher Support-Standard, starke Speed-Story, Enterprise-Preisniveau.</div>
+        </div>
+        
+
+        <div class="offer card">
+          <span class="tag">High Commission</span>
+          <h3>WP Engine</h3>
+          <p>WordPress DXP/Hosting mit starken Features (Staging, Security, Performance).</p>
+          <div class="meta"><span>Enterprise</span><span>Staging</span><span>DXP</span></div>
+          <div class="actions" style="margin-top:12px">
+            <a class="btn primary" href="https://wpengine.com/?utm_source=wissens-bank&utm_medium=affiliate&utm_campaign=security-hub" target="_blank" rel="noreferrer">WP Engine ansehen →</a>
+            <a class="btn" href="/hosting-kosten/">Vergleich</a>
+          </div>
+          <div class="small" style="margin-top:10px">Guter Fit für Agenturen, Shops und Business-Seiten.</div>
+        </div>
+        
+
+        <div class="offer card">
+          <span class="tag">Marketing Stack</span>
+          <h3>HubSpot CRM Suite</h3>
+          <p>CRM + Marketing Automation, wenn du Leads wirklich monetarisieren willst.</p>
+          <div class="meta"><span>CRM</span><span>Automation</span><span>Revenue</span></div>
+          <div class="actions" style="margin-top:12px">
+            <a class="btn primary" href="https://www.hubspot.com/partners/affiliates?utm_source=wissens-bank&utm_medium=affiliate&utm_campaign=security-hub" target="_blank" rel="noreferrer">HubSpot ansehen →</a>
+            <a class="btn" href="/hosting-kosten/">Vergleich</a>
+          </div>
+          <div class="small" style="margin-top:10px">High-ticket SaaS, starke Brand, klare Conversion-Pfade.</div>
+        </div>
+        </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>Trust, aber echt</h2>
+    <div class="grid3">
+      <div class="offer card">
+        <span class="tag">DSGVO</span>
+        <h3>Consent first</h3>
+        <p>Kein verstecktes Tracking. Optionales Tracking erst nach Einwilligung.</p>
+        <div class="meta"><span>Datenschutz</span><span>Transparenz</span><span>EU</span></div>
+      </div>
+      <div class="offer card">
+        <span class="tag">Sicherheit</span>
+        <h3>Kein Scanning</h3>
+        <p>Der Quickcheck ist eine Checkliste + Heuristik, kein Portscan (rechtlich sauber).</p>
+        <div class="meta"><span>Legal</span><span>Safe</span><span>Pragmatisch</span></div>
+      </div>
+      <div class="offer card">
+        <span class="tag">Performance</span>
+        <h3>Static-first</h3>
+        <p>HTML/CSS/JS pur. Functions nur wo nötig. Schnell, stabil, billig.</p>
+        <div class="meta"><span>Core Web Vitals</span><span>Minimal</span><span>Deploy</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <footer class="footer">
+  <div class="container">
+    <div><b>Transparenz:</b> Einige Links sind Affiliate-Links. Wenn du darüber kaufst, erhalten wir eine Provision – ohne Mehrkosten für dich.</div>
+    <div class="links">
+      <a href="/impressum/">Impressum</a>
+      <a href="/datenschutz/">Datenschutz</a>
+      <a href="/agb/">AGB</a>
+      <a href="/sicherheit/">Sicherheits-Guide</a>
+      <a href="/hosting-kosten/">Empfehlungen</a>
+    </div>
+    <div class="small" style="margin-top:10px">© <span id="y"></span> Wissens-Bank. <script>document.getElementById('y').textContent=new Date().getFullYear()</script></div>
+  </div>
+</footer>
+
+  <div id="cookie" class="cookie">
+  <div class="box card">
+    <p>
+      <b>Cookies/Tracking:</b> Diese Seite nutzt nur technisch notwendige Speicherung (Consent).
+      Optionales Tracking laden wir erst nach Einwilligung.
+      <a href="/datenschutz/">Mehr erfahren</a>.
+    </p>
+    <div class="actions">
+      <button id="cookie-decline" class="btn">Ablehnen</button>
+      <button id="cookie-accept" class="btn primary">Akzeptieren</button>
+    </div>
+  </div>
+</div>
+
+  <script src="/assets/app.js" defer></script>
+
+<!-- Deployed with Zip-Ship -->
+<div id="zipship-badge" style="position:fixed;bottom:12px;right:12px;z-index:9999;font-family:system-ui,sans-serif;font-size:12px;">
+  <a href="https://zip-ship-revolution.com/?utm_source=user_site" target="_blank" rel="noopener" 
+     style="display:flex;align-items:center;gap:6px;padding:6px 12px;background:rgba(10,14,39,0.85);color:#00F0FF;text-decoration:none;border-radius:6px;border:1px solid rgba(0,240,255,0.3);backdrop-filter:blur(8px);transition:all 0.2s;">
+    <span style="font-size:14px;">⚡</span>
+    <span>Deployed with Zip-Ship</span>
+  </a>
+</div>
+</body>
+</html>

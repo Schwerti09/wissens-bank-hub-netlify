@@ -1,0 +1,21 @@
+{
+  "name": "wissens-bank-hub",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "netlify dev",
+    "format": "node scripts/format-check.mjs"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^0.9.5",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "netlify-cli": "^17.33.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

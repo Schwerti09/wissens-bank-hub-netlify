@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sicherheits-Guide | Wissens-Bank</title>
+  <meta name="description" content="Hardening-Guide: Firewall, SSH, Secrets, HTTPS, Backups, Monitoring. Kurz, konkret, abhakbar." />
+  <link rel="canonical" href="https://example.netlify.app/sicherheit/" />
+  <meta name="robots" content="index,follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Sicherheits-Guide | Wissens-Bank" />
+  <meta property="og:description" content="Hardening-Guide: Firewall, SSH, Secrets, HTTPS, Backups, Monitoring. Kurz, konkret, abhakbar." />
+  <meta property="og:url" content="https://example.netlify.app/sicherheit/" />
+  <meta name="theme-color" content="#070a12" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/assets/styles.css" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Wissens-Bank", "url": "https://example.netlify.app", "email": "rps-vertrieb@t-online.de", "address": {"@type": "PostalAddress", "streetAddress": "Karklandsweg 1", "postalCode": "26553", "addressLocality": "Dornum", "addressCountry": "DE"}}</script>
+</head>
+<body>
+  <div class="nav">
+  <div class="container">
+    <div class="row">
+      <a class="brand" href="/"><span>Wissens</span>-Bank</a>
+      <nav class="menu">
+        <a href="/sicherheit/">Sicherheit</a>
+        <a href="/einrichtung/">Einrichtung</a>
+        <a href="/hosting-kosten/">Hosting & Kosten</a>
+        <a href="/impressum/">Impressum</a>
+      </nav>
+      <div class="badges">
+        <span class="pill">DSGVO</span>
+        <span class="pill">Keine Speicherung im Check</span>
+        <span class="pill">Static-first</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+<section class="hero">
+  <div class="container">
+    <div class="card hcard">
+      <h1 class="h1">Sicherheits-Guide: Hardening in 60 Minuten</h1>
+      <p class="sub">Checkliste, die du wirklich abhaken kannst. Kein Geschwafel.</p>
+      <div class="actions">
+        <a class="btn primary" href="/#check">Quickcheck</a>
+        <a class="btn" href="/hosting-kosten/">Empfehlungen</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>1) Sofortmaßnahmen</h2>
+    <div class="grid3">
+      <div class="offer card"><span class="tag">Keys</span><h3>API-Keys rotieren</h3><p>Alte Keys deaktivieren. Neue Keys nur als Secrets.</p></div>
+      <div class="offer card"><span class="tag">Netz</span><h3>Firewall</h3><p>Nur Ports offen, die du brauchst. Default: alles zu.</p></div>
+      <div class="offer card"><span class="tag">Zugriff</span><h3>SSH härten</h3><p>Key-Auth, Root-Login aus, Fail2ban, 2FA.</p></div>
+    </div>
+
+    <h2 style="margin-top:22px">2) Standard-Setup</h2>
+    <div class="card panel">
+      <ol style="color:var(--muted); margin:0; padding-left:18px">
+        <li>Ubuntu LTS installieren, sofort Updates.</li>
+        <li>Neuen Admin-User anlegen, Root-SSH deaktivieren.</li>
+        <li>UFW aktivieren: 22 (optional), 80/443, sonst nix.</li>
+        <li>Reverse Proxy + HTTPS + HSTS.</li>
+        <li>Secrets: nur ENV/Secret Manager.</li>
+        <li>Backups: täglich + Restore-Test.</li>
+        <li>Monitoring: Uptime + Logs + Alerts.</li>
+      </ol>
+    </div>
+
+    <h2 style="margin-top:22px">3) Tools</h2>
+    <p>High-Ticket Optionen – weniger Ärger, mehr Stabilität.</p>
+    <div class="grid3">
+        <div class="offer card">
+          <span class="tag">High-Ticket Hosting</span>
+          <h3>Kinsta Managed Hosting</h3>
+          <p>Premium WordPress Hosting für Performance & Security. Ideal, wenn du 'keine Experimente' willst.</p>
+          <div class="meta"><span>Managed</span><span>Performance</span><span>Security</span></div>
+          <div class="actions" style="margin-top:12px">
+            <a class="btn primary" href="https://kinsta.com/?utm_source=wissens-bank&utm_medium=affiliate&utm_campaign=security-hub" target="_blank" rel="noreferrer">Kinsta ansehen →</a>
+            <a class="btn" href="/hosting-kosten/">Vergleich</a>
+          </div>
+          <div class="small" style="margin-top:10px">Hoher Support-Standard, starke Speed-Story, Enterprise-Preisniveau.</div>
+        </div>
+        
+
+        <div class="offer card">
+          <span class="tag">High Commission</span>
+          <h3>WP Engine</h3>
+          <p>WordPress DXP/Hosting mit starken Features (Staging, Security, Performance).</p>
+          <div class="meta"><span>Enterprise</span><span>Staging</span><span>DXP</span></div>
+          <div class="actions" style="margin-top:12px">
+            <a class="btn primary" href="https://wpengine.com/?utm_source=wissens-bank&utm_medium=affiliate&utm_campaign=security-hub" target="_blank" rel="noreferrer">WP Engine ansehen →</a>
+            <a class="btn" href="/hosting-kosten/">Vergleich</a>
+          </div>
+          <div class="small" style="margin-top:10px">Guter Fit für Agenturen, Shops und Business-Seiten.</div>
+        </div>
+        
+
+        <div class="offer card">
+          <span class="tag">Cloud Hosting</span>
+          <h3>Cloudways</h3>
+          <p>Managed Cloud Hosting (DigitalOcean/AWS/etc.) — schneller Einstieg, weniger Ops-Schmerz.</p>
+          <div class="meta"><span>Managed Cloud</span><span>VPS</span><span>Easy</span></div>
+          <div class="actions" style="margin-top:12px">
+            <a class="btn primary" href="https://www.cloudways.com/en/?utm_source=wissens-bank&utm_medium=affiliate&utm_campaign=security-hub" target="_blank" rel="noreferrer">Cloudways ansehen →</a>
+            <a class="btn" href="/hosting-kosten/">Vergleich</a>
+          </div>
+          <div class="small" style="margin-top:10px">Für Leute, die VPS-Power ohne Admin-Hölle wollen.</div>
+        </div>
+        </div>
+  </div>
+</section>
+
+  <footer class="footer">
+  <div class="container">
+    <div><b>Transparenz:</b> Einige Links sind Affiliate-Links. Wenn du darüber kaufst, erhalten wir eine Provision – ohne Mehrkosten für dich.</div>
+    <div class="links">
+      <a href="/impressum/">Impressum</a>
+      <a href="/datenschutz/">Datenschutz</a>
+      <a href="/agb/">AGB</a>
+      <a href="/sicherheit/">Sicherheits-Guide</a>
+      <a href="/hosting-kosten/">Empfehlungen</a>
+    </div>
+    <div class="small" style="margin-top:10px">© <span id="y"></span> Wissens-Bank. <script>document.getElementById('y').textContent=new Date().getFullYear()</script></div>
+  </div>
+</footer>
+
+  <div id="cookie" class="cookie">
+  <div class="box card">
+    <p>
+      <b>Cookies/Tracking:</b> Diese Seite nutzt nur technisch notwendige Speicherung (Consent).
+      Optionales Tracking laden wir erst nach Einwilligung.
+      <a href="/datenschutz/">Mehr erfahren</a>.
+    </p>
+    <div class="actions">
+      <button id="cookie-decline" class="btn">Ablehnen</button>
+      <button id="cookie-accept" class="btn primary">Akzeptieren</button>
+    </div>
+  </div>
+</div>
+
+  <script src="/assets/app.js" defer></script>
+
+<!-- Deployed with Zip-Ship -->
+<div id="zipship-badge" style="position:fixed;bottom:12px;right:12px;z-index:9999;font-family:system-ui,sans-serif;font-size:12px;">
+  <a href="https://zip-ship-revolution.com/?utm_source=user_site" target="_blank" rel="noopener" 
+     style="display:flex;align-items:center;gap:6px;padding:6px 12px;background:rgba(10,14,39,0.85);color:#00F0FF;text-decoration:none;border-radius:6px;border:1px solid rgba(0,240,255,0.3);backdrop-filter:blur(8px);transition:all 0.2s;">
+    <span style="font-size:14px;">⚡</span>
+    <span>Deployed with Zip-Ship</span>
+  </a>
+</div>
+</body>
+</html>
